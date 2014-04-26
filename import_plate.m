@@ -26,7 +26,7 @@ function result = import_plate(directory)
 
 			% If we did not get 96 readings, something went wrong
 			if(length(D{1}) ~= 96)
-				error(strcat('file ', fullfile(directory, file.name), ' looks corrupt - did not get 96 entries'));
+				warning(strcat('file ', fullfile(directory, file.name), ' looks corrupt - did not get 96 entries'));
 			end
 
 			% Append the new data to the matrix
